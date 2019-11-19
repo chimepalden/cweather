@@ -1,0 +1,9 @@
+<div>
+  <h1>{{author.name}}</h1>
+  <h3>{{author.title}}</h3>
+  <p>{{author.address}}</p>
+  <div *ngIf="author.phone.length">
+    <p>Phone:</p>
+    <p *ngFor = "let item of author.phone">{{phoneNumber}}</p>
+  </div>
+</div>

@@ -2,18 +2,23 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ForecastComponent } from './forecast/forecast.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DateComponent } from './date/date.component';
 
  const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home',
-      component: HomeComponent
-    },
-    { path: 'forecast',
-      component: ForecastComponent
-      /*children: [
-        { path: '', component: GooglemapComponent }
-      ]*/
-    }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home',
+    component: HomeComponent,
+    children: [
+      {path: 'date', component: DateComponent}
+    ]
+  },
+  { path: 'forecast', component: ForecastComponent
+    /*children: [
+      { path: '', component: GooglemapComponent }
+    ]*/
+  },
+  { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
@@ -22,6 +27,4 @@ import { ForecastComponent } from './forecast/forecast.component';
 })
 
 export class AppRoutingModule {}
-export const routingComponents = [HomeComponent,
-                                  ForecastComponent
-                                ];
+export const routingComponents = [HomeComponent, ForecastComponent];

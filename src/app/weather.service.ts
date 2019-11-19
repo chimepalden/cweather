@@ -10,6 +10,7 @@ export class WeatherService {
   private _currentWeatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=';
   private _forecastUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=';
   private _apiKey = '9391c234f787ac1447cd71d7432aa3f6';
+  // Dependency injection of HttpClient service
   constructor(private _http: HttpClient) { }
   /*getWeather(cityName: string): Observable<any> {
     return this._http.get<any>(this._weatherUrl + cityName + '&APPID=' + this._apiKey)
