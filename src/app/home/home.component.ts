@@ -9,31 +9,31 @@ import { AgmCoreModule } from '@agm/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  defaultLocation = 'toronto';
   location: any;
-  // to store city name in localstorage
-  value: any;
-  // to store toronto's weather data
-  torontoWeatherData: any;
-  submitted;
-  // to store searched city's weather data
-  weatherData: any;
+  value: any; // to store city name in localstorage
+  torontoWeatherData = {}; // to store toronto's weather data
+  submitted: any;
+  weatherData: {}; // to store searched city's weather data
   // Default latitude and longitude value for the map
   lat = 43.65;
   lng = -79.38;
   citySubmitted = false;
 
-  constructor(private _weatherService: WeatherService, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(private _weatherService: WeatherService,
+              private _router: Router,
+              private _route: ActivatedRoute) { }
 
   // it runs once after the component is initialised.
   // to save and show Toronto's weather at the top all the time after the component is initialised.
   ngOnInit() {
-    this.value = localStorage.getItem('location');
+    /*this.value = localStorage.getItem('location');
     if (this.value != null) {
       this.location = JSON.parse(this.value);
     } else {
       this.location = 'Toronto';
-    }
-    this._weatherService.getWeatherData(this.location)
+    } */
+    this._weatherService.getWeatherData(this.defaultLocation)
                         .subscribe(res => {
                           console.log(res);
                           this.torontoWeatherData = res;

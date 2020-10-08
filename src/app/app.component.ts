@@ -1,22 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Author } from './address-card/author.model';
+
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'cWeather';
 
-  routes = [
+  constructor(private _authService: AuthService) {}
+
+  ngOnInit() {}
+
+  /*routes = [
     {linkName: 'Home', url: 'home'},
     {linkName: '5 Days', url: 'forecast'},
     {linkName: 'Login', url: 'login'},
-    {linkName: 'Register', url: 'register'},
-    {linkName: 'Logout', url: 'logout'}
-  ];
-  constructor() {}
+    {linkName: 'Register', url: 'register'}
+  ];*/
+
   /*author: Author;
   constructor() {
     this.author = new Author();

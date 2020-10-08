@@ -6,13 +6,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DateComponent } from './date/date.component';
 
  const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home',
+  { path: 'cWeather',
     component: HomeComponent,
     children: [
       {path: 'date', component: DateComponent}
     ]
   },
+  { path: '', redirectTo: '/cWeather', pathMatch: 'full'},
   { path: 'forecast', component: ForecastComponent
     /*children: [
       { path: '', component: GooglemapComponent }
