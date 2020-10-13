@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Author } from './address-card/author.model';
-
 import { AuthService } from './auth.service';
 
 @Component({
@@ -11,7 +9,7 @@ import { AuthService } from './auth.service';
 export class AppComponent implements OnInit {
   title = 'cWeather';
 
-  constructor(private _authService: AuthService) {}
+  constructor(public _authService: AuthService) {}
 
   ngOnInit() {}
 

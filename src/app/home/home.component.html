@@ -5,7 +5,7 @@
   </div>
   <div class="container">
     <h3>Toronto</h3>
-    {{torontoWeatherData.dt | date }}<br> 
+    {{torontoWeatherData.dt | date}}<br> 
     Temp: {{torontoWeatherData.main.temp}}
     max: {{torontoWeatherData.main.temp_max}}, min: {{torontoWeatherData.main.temp_min}}
   </div>
@@ -34,7 +34,7 @@
             <h2>{{weatherData.name}}</h2>
           </div>  
           <div class="card-body">
-            {{weatherData.dt | date }}<br>
+            {{weatherData.dt | date}}<br>
             Temp: {{weatherData.main.temp}}
             max: {{weatherData.main.temp_max}}, min: {{weatherData.main.temp_min}}<br>
             Sunrise: {{weatherData.sys.sunrise}}, Sunset: {{weatherData.sys.sunset}}

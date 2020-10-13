@@ -12,8 +12,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ForecastComponent } from './forecast/forecast.component';
 
-import { DateComponent } from './date/date.component';
-import { AddressCardComponent } from './address-card/address-card.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
@@ -22,8 +20,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     routingComponents,
     HomeComponent,
     ForecastComponent,
-    DateComponent,
-    AddressCardComponent,
     PageNotFoundComponent
   ],
   imports: [

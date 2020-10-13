@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
   defaultLocation = 'toronto';
   location: any;
   value: any; // to store city name in localstorage
-  torontoWeatherData = {}; // to store toronto's weather data
+  torontoWeatherData: any; // to store toronto's weather data
   submitted: any;
-  weatherData: {}; // to store searched city's weather data
+  weatherData: any; // to store searched city's weather data
   // Default latitude and longitude value for the map
   lat = 43.65;
   lng = -79.38;

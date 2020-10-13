@@ -1,14 +1,14 @@
 <div class="container-fluid">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">  
-    <a class="navbar-brand" routerLink="/cWeather">{{title}}</a>
+    <a class="navbar-brand" routerLink="home">{{title}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class ="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" *ngFor = "let route of routes" [routerLink]="route.url" routerLinkActive="active">{{route.linkName}}</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/forecast" routerLinkActive="active">5 Days</a>
         </li>
@@ -26,7 +26,7 @@
   <div class="page-footer bg-dark p-3">
     <div class="row">
       <div class="col-md-6 d-flex justify-content-center">
-        <header><a routerLink="/cWeather" routerLinkActive="active">cWeather</a></header>
+        <header><a routerLink="home" routerLinkActive="active">cWeather</a></header>
         <ul>
           <li><a routerLink="#">About</a></li>
           <li><a routerLink="#">Contact</a></li>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="footer-copyright text-center">
-        @ 2018 	Copyright: <a routerLink="/cWeather" routerLinkActive="active">cWeather</a>
+        @ 2018 	Copyright: <a routerLink="home" routerLinkActive="active">cWeather</a>
     </div>
   </div> 
 </div>
